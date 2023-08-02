@@ -2,8 +2,9 @@
   "name": "simple-cloud-storage",
   "version": "0.0.0",
   "description": "Web-based storage solution to store and retrieve files from a personal cloud-based storage space",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "scripts": {
+    "start": "node --watch --no-warnings src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/chinmaykunkikar/airtribe-scs/issues"
   },
-  "homepage": "https://github.com/chinmaykunkikar/airtribe-scs#readme"
+  "homepage": "https://github.com/chinmaykunkikar/airtribe-scs#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.1"
+  }
 }
