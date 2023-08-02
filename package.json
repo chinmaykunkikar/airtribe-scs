@@ -1,0 +1,23 @@
+{
+  "name": "simple-cloud-storage",
+  "version": "0.0.0",
+  "description": "Web-based storage solution to store and retrieve files from a personal cloud-based storage space",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinmaykunkikar/airtribe-scs.git"
+  },
+  "keywords": [
+    "airtribe",
+    "scs"
+  ],
+  "author": "Chinmay Kunkikar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chinmaykunkikar/airtribe-scs/issues"
+  },
+  "homepage": "https://github.com/chinmaykunkikar/airtribe-scs#readme"
+}
