@@ -2,6 +2,7 @@ const express = require("express");
 const helmet = require("helmet");
 const routes = express.Router();
 const { PORT: ENV_PORT } = require("./config/env.config");
+const userRoutes = require("./routes/user.route");
 
 let PORT;
 const app = express();
@@ -14,6 +15,8 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (_, res) => {
   res.status(200).send("<h2>Simple Cloud Storage Backend</h2>");
 });
+
+app.use("/api/user", userRoutes);
 
 ENV_PORT !== "" && !isNaN(ENV_PORT) ? (PORT = ENV_PORT) : (PORT = 3000);
 
