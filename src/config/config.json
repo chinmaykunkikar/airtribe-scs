@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "chinmay",
+    "password": "8087",
+    "database": "scs",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
