@@ -1,7 +1,8 @@
 require("dotenv").config();
 
-const { PORT } = process.env;
+const { PORT, JWT_SECRET } = process.env;
 
 module.exports = {
   PORT,
+  JWT_SECRET,
 };
