@@ -1,7 +1,7 @@
 const express = require("express");
 const helmet = require("helmet");
 const routes = express.Router();
-const { PORT: ENV_PORT } = require("./configs/env.config");
+const { PORT: ENV_PORT } = require("./config/env.config");
 
 let PORT;
 const app = express();
