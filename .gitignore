@@ -28,3 +28,6 @@ lerna-debug.log*
 
 # Redis binary dump (dump.rdb) files
 *.rdb
+
+# Ignore uploads dir
+uploads/
