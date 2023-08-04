@@ -9,7 +9,7 @@ const authenticateUser = async (req, res, next) => {
   }
   try {
     const decoded = jwt.verify(token, JWT_SECRET);
-    const user = await User.findByPk(decoded.id);
+    const user = await User.findByPk(decoded.userId);
 
     if (!user) {
       return res.status(401).json({ error: "Unauthorized" });
