@@ -1,26 +1,44 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class File extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  }
-  File.init({
-    name: DataTypes.STRING,
-    userId: DataTypes.INTEGER,
-    latestVersion: DataTypes.INTEGER,
-    folderId: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'File',
-  });
-  return File;
-};
+// src/models/file.js
+const { DataTypes } = require("sequelize");
+const sequelize = require("../configs/sequelize.config"); // This assumes you have set up the Sequelize instance in env.config.js
+
+const File = sequelize.define("File", {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+    allowNull: false,
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  version: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    defaultValue: 1,
+  },
+  originalFilePath: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  fileUrl: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  userId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    defaultValue: null,
+  },
+  createdAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+  updatedAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+});
+
+module.exports = File;
